@@ -1,37 +1,42 @@
 # Abisekha — Cinematic AI Engineer Portfolio
 
-A responsive Next.js App Router portfolio with Tailwind CSS, Framer Motion, a lightweight animated canvas particle field, project cards, skills, and recruiter-focused contact links.
+A responsive Next.js App Router portfolio for Abisekha Melfin V, featuring a cinematic hero, animated particle field, scroll progress indicator, motion-led sections, project-specific dashboard-style visual previews, skills, work history, education, certifications, and recruiter-focused contact links.
 
-## Requirements
-- Node.js 18.17+ (Node 20 LTS recommended)
-- npm
+## Stack
+- Next.js 14 App Router + React + TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide icons
 
 ## Run locally
+Requires Node.js 18.17+ (Node 20 LTS recommended) and npm.
+
 ```bash
 npm install
 npm run dev
 ```
+
 Open http://localhost:3000.
 
-## Production static export
+## Build and deploy
 ```bash
 npm run build
 ```
-The static site is generated in `out/` because `next.config.mjs` enables `output: 'export'`. Deploy `out/` to Netlify, Vercel static hosting, or another static host.
+
+`next.config.mjs` enables static export, so the generated site is written to `out/`. Deploy that output to a static host, or import the source repository into Vercel and let it build the Next.js project.
+
+## Project visuals
+Project cards contain animated dashboard-style illustrative previews built in React/CSS. They are custom visuals to communicate each project's theme; they are not screenshots of production software.
 
 ## Before publishing
-1. Verify every project link and ensure each live demo is accessible.
-2. Replace any generic GitHub profile links with the exact repository for that project.
-3. Add a real public résumé PDF in `public/` and link it from the hero if desired. No résumé file is bundled because one was not provided for this build.
-4. Replace the footer's placeholder `mailto:hello@abisekha-dev.netlify.app` with a working email address.
-5. Confirm wording and project outcomes are accurate; do not publish metrics you cannot substantiate.
-6. The hero artwork is generated in CSS and Canvas, so no image-sequence assets are required. This keeps the experience light and avoids missing `1.webp`–`120.webp` files.
+1. Verify each project link and live demo.
+2. Replace general GitHub profile links with exact repositories when available.
+3. Confirm all project descriptions and outcomes are accurate.
+4. The email and phone number are populated from the supplied portfolio details; update them if you prefer different public contact information.
+5. Keep secrets and API keys out of the repository.
 
 ## Customize projects
-Edit `data/projects.ts`. Each project supports `liveUrl`, `githubUrl`, stack tags, an explanation, and a visual theme.
+Edit `data/projects.ts`. Each project supports `liveUrl`, `githubUrl`, stack tags, a description, and a visual theme.
 
-## Notes
-- Static export means server-only features and API routes are not included.
-- Google Fonts are loaded through `next/font/google` at build time; the build environment needs access to Google Fonts unless the font is self-hosted.
-- The contact area currently links to LinkedIn and GitHub. Add a real email address or contact form provider before publishing.
-"# Abisekha-Cinematic-Portfolio" 
+## Accessibility and performance
+Animations respect `prefers-reduced-motion`; the site is responsive and uses CSS/Canvas artwork rather than a heavy video background.

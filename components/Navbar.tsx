@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowUpRight, Menu, X } from 'lucide-react';
 
-const links = [{ label: 'Work', href: '#work' }, { label: 'About', href: '#about' }, { label: 'Contact', href: '#contact' }];
+const links = [{ label: 'Work', href: '#work' }, { label: 'About', href: '#about' }, { label: 'Journey', href: '#journey' }, { label: 'Contact', href: '#contact' }];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
