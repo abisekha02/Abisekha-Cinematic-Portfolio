@@ -1,0 +1,29 @@
+import { ArrowDownRight, ArrowUpRight, Code2, Orbit, ScanEye, Workflow } from 'lucide-react';
+import type { Project } from '@/data/projects';
+import Reveal from './Reveal';
+
+const icons = { hire: Code2, flow: Workflow, vision: ScanEye, vr: Orbit };
+const visualStyles = {
+  hire: 'from-rose-950 via-[#38101b] to-black',
+  flow: 'from-[#271016] via-[#180d16] to-black',
+  vision: 'from-[#21120d] via-[#261018] to-black',
+  vr: 'from-[#101b29] via-[#17101e] to-black',
+};
+export default function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const Icon = icons[project.visual];
+  return <Reveal delay={index * 0.07} className="group">
+    <article className="overflow-hidden rounded-3xl border border-white/10 bg-white/[.025] transition duration-500 hover:-translate-y-1 hover:border-rose-400/30 hover:bg-white/[.04]">
+      <div className={`relative flex min-h-[230px] items-center justify-center overflow-hidden bg-gradient-to-br ${visualStyles[project.visual]} p-8 sm:min-h-[270px]`}>
+        <div className="absolute inset-0 site-grid opacity-50" />
+        <div className="absolute h-48 w-48 rounded-full bg-rose-500/10 blur-3xl transition duration-700 group-hover:scale-150" />
+        <div className="relative flex h-28 w-28 items-center justify-center rounded-[2rem] border border-white/15 bg-black/30 shadow-2xl backdrop-blur-xl transition duration-500 group-hover:rotate-[-5deg] group-hover:scale-105"><Icon size={42} strokeWidth={1.1} className="text-rose-200" /><span className="absolute -right-2 -top-2 h-3 w-3 rounded-full bg-rose-400 shadow-[0_0_18px_rgba(251,113,133,.9)]" /></div>
+        <span className="absolute left-6 top-6 text-xs tracking-[.2em] text-white/40">PROJECT / {project.number}</span><span className="absolute bottom-6 right-6 flex items-center gap-2 text-xs text-white/45">Explore concept <ArrowDownRight size={14} /></span>
+      </div>
+      <div className="p-6 sm:p-8"><p className="section-kicker">{project.category}</p><h3 className="mt-3 text-2xl font-semibold tracking-[-.04em] sm:text-3xl">{project.name}</h3><p className="mt-2 text-base text-rose-100/90">{project.headline}</p><p className="mt-4 max-w-xl text-sm leading-7 text-white/55">{project.description}</p>
+        <div className="mt-5 flex flex-wrap gap-2">{project.stack.map((item) => <span key={item} className="rounded-full border border-white/10 bg-white/[.035] px-3 py-1.5 text-[11px] text-white/65">{item}</span>)}</div>
+        <p className="mt-5 border-l border-rose-400/60 pl-3 text-sm leading-6 text-white/65">{project.outcome}</p>
+        <div className="mt-6 flex flex-wrap gap-4">{project.liveUrl && <a className="inline-flex items-center gap-2 text-sm font-medium text-rose-200 transition hover:text-white" href={project.liveUrl} target="_blank" rel="noreferrer">Live demo <ArrowUpRight size={15} /></a>}{project.githubUrl && <a className="inline-flex items-center gap-2 text-sm text-white/65 transition hover:text-white" href={project.githubUrl} target="_blank" rel="noreferrer">Source / GitHub <ArrowUpRight size={15} /></a>}</div>
+      </div>
+    </article>
+  </Reveal>;
+}
