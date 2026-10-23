@@ -1,40 +1,37 @@
-# Abisekha Cinematic Portfolio
+# Abisekha — Cinematic AI Engineer Portfolio
 
-A cinematic, recruiter-facing portfolio built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion.
+A responsive Next.js App Router portfolio with Tailwind CSS, Framer Motion, a lightweight animated canvas particle field, project cards, skills, and recruiter-focused contact links.
 
-## Included
-- Cinematic dark hero with restrained orbital animation and a reserved hero slot for a future 3D model.
-- Scroll progress, staggered section reveals, subtle gradient movement, and reduced-motion support.
-- Nine project cards based on the projects listed on https://abisekha-dev.netlify.app/.
-- Project-specific animated interface concept previews (these are illustrations, not screenshots of the running projects).
-- Live-demo and GitHub destinations stored in `data/projects.ts` so they can be reviewed and edited in one place.
-- Responsive layout, experience, education, certifications, contact, LinkedIn, and GitHub sections.
+## Requirements
+- Node.js 18.17+ (Node 20 LTS recommended)
+- npm
 
 ## Run locally
-
 ```bash
 npm install
 npm run dev
 ```
-
 Open http://localhost:3000.
 
-## Production build
-
+## Production static export
 ```bash
 npm run build
-npm start
 ```
+The static site is generated in `out/` because `next.config.mjs` enables `output: 'export'`. Deploy `out/` to Netlify, Vercel static hosting, or another static host.
 
-## Deployment
+## Before publishing
+1. Verify every project link and ensure each live demo is accessible.
+2. The project cards use specific repositories where a public repository was verifiable. EmployeeAssist AI and Kadai ERP do not show a source button until you provide their exact repository URLs.
+3. Add your current résumé PDF as `public/resume.pdf` before deploying; the header, hero, and footer buttons point to that file.
+4. The contact email is set to `abiicaspia@gmail.com`, based on your existing portfolio.
+5. Review the project descriptions and IPCS achievement line before publishing. No unverified performance metrics are included.
+6. Add genuine project screenshots or short screen recordings when available; the current cards use themed CSS visuals rather than claiming to be actual product screenshots.
+7. The hero artwork is generated in CSS and Canvas, so no image-sequence assets are required. This keeps the experience light and avoids missing `1.webp`–`120.webp` files.
 
-Import the repository into Vercel and use the default Next.js build settings.
-
-## Add the 3D model later
-
-The hero has a marked `data-3d-model-slot="hero"` integration point. When the GLB/GLTF asset is ready, replace the decorative orb with a lazy-loaded React Three Fiber/Drei scene. Keep a static fallback and honor `prefers-reduced-motion` for accessibility and performance.
+## Customize projects
+Edit `data/projects.ts`. Each project supports `liveUrl`, `githubUrl`, stack tags, an explanation, and a visual theme.
 
 ## Notes
-- Project-specific preview panels are animated UI concepts; they are not claimed to be screenshots from the actual applications.
-- The attendance live-demo URL is preserved from the source portfolio. Check that deployment before sharing it with recruiters, as external availability can change.
-- Project URLs are maintained in `data/projects.ts`.
+- Static export means server-only features and API routes are not included.
+- Google Fonts are loaded through `next/font/google` at build time; the build environment needs access to Google Fonts unless the font is self-hosted.
+- Open Graph and Twitter preview metadata use the bundled `public/og-image.svg`. The résumé PDF still needs to be supplied before the download buttons can work.
