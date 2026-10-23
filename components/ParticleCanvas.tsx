@@ -27,7 +27,7 @@ export default function ParticleCanvas() {
         if (!reduce) p.y -= p.speed;
         if (p.y < -5) p.y = height + 5;
         ctx.beginPath(); ctx.arc(x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255, ${90 + Math.floor(p.alpha * 60)}, ${115 + Math.floor(p.alpha * 55)}, ${p.alpha})`; ctx.fill();
+        ctx.fillStyle = `rgba(${150 + Math.floor(p.alpha * 55)}, ${140 + Math.floor(p.alpha * 70)}, 255, ${p.alpha})`; ctx.fill();
       }
       if (!reduce) raf = window.requestAnimationFrame(draw);
     };

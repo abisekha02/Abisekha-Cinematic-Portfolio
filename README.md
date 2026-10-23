@@ -1,15 +1,16 @@
-# Abisekha — Cinematic AI Engineer Portfolio
+# Abisekha Cinematic Portfolio
 
-A responsive Next.js App Router portfolio for Abisekha Melfin V, featuring a cinematic hero, animated particle field, scroll progress indicator, motion-led sections, project-specific dashboard-style visual previews, skills, work history, education, certifications, and recruiter-focused contact links.
+A cinematic, recruiter-facing portfolio built with Next.js, React, TypeScript, Tailwind CSS, and Framer Motion.
 
-## Stack
-- Next.js 14 App Router + React + TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide icons
+## Included
+- Cinematic dark hero with restrained orbital animation and a reserved hero slot for a future 3D model.
+- Scroll progress, staggered section reveals, subtle gradient movement, and reduced-motion support.
+- Nine project cards based on the projects listed on https://abisekha-dev.netlify.app/.
+- Project-specific animated interface concept previews (these are illustrations, not screenshots of the running projects).
+- Live-demo and GitHub destinations stored in `data/projects.ts` so they can be reviewed and edited in one place.
+- Responsive layout, experience, education, certifications, contact, LinkedIn, and GitHub sections.
 
 ## Run locally
-Requires Node.js 18.17+ (Node 20 LTS recommended) and npm.
 
 ```bash
 npm install
@@ -18,25 +19,22 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Build and deploy
+## Production build
+
 ```bash
 npm run build
+npm start
 ```
 
-`next.config.mjs` enables static export, so the generated site is written to `out/`. Deploy that output to a static host, or import the source repository into Vercel and let it build the Next.js project.
+## Deployment
 
-## Project visuals
-Project cards contain animated dashboard-style illustrative previews built in React/CSS. They are custom visuals to communicate each project's theme; they are not screenshots of production software.
+Import the repository into Vercel and use the default Next.js build settings.
 
-## Before publishing
-1. Verify each project link and live demo.
-2. Replace general GitHub profile links with exact repositories when available.
-3. Confirm all project descriptions and outcomes are accurate.
-4. The email and phone number are populated from the supplied portfolio details; update them if you prefer different public contact information.
-5. Keep secrets and API keys out of the repository.
+## Add the 3D model later
 
-## Customize projects
-Edit `data/projects.ts`. Each project supports `liveUrl`, `githubUrl`, stack tags, a description, and a visual theme.
+The hero has a marked `data-3d-model-slot="hero"` integration point. When the GLB/GLTF asset is ready, replace the decorative orb with a lazy-loaded React Three Fiber/Drei scene. Keep a static fallback and honor `prefers-reduced-motion` for accessibility and performance.
 
-## Accessibility and performance
-Animations respect `prefers-reduced-motion`; the site is responsive and uses CSS/Canvas artwork rather than a heavy video background.
+## Notes
+- Project-specific preview panels are animated UI concepts; they are not claimed to be screenshots from the actual applications.
+- The attendance live-demo URL is preserved from the source portfolio. Check that deployment before sharing it with recruiters, as external availability can change.
+- Project URLs are maintained in `data/projects.ts`.

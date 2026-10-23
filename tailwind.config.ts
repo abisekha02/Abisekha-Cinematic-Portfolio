@@ -5,13 +5,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'strawberry-red': '#ef3340',
-        'deep-crimson': '#450b14',
-        'glow-gold': '#ffcc8a',
-        ink: '#080808',
+        'strawberry-red': '#8b7cff',
+        'deep-crimson': '#17152d',
+        'glow-gold': '#a5f3fc',
+        ink: '#080912',
       },
       fontFamily: { sans: ['var(--font-outfit)', 'sans-serif'] },
-      boxShadow: { glow: '0 0 45px rgba(239,51,64,.24)' },
+      boxShadow: { glow: '0 0 45px rgba(124,111,240,.24)' },
       letterSpacing: { display: '-.065em' },
     },
   },

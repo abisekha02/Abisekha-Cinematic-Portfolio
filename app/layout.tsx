@@ -7,7 +7,6 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-outfit', display: 
 export const metadata: Metadata = {
   title: 'Abisekha Melfin | AI Engineer & Full Stack Developer',
   description: 'AI engineering, intelligent automation, full-stack applications, computer vision, and immersive technology projects.',
-  metadataBase: new URL('https://abisekha-dev.netlify.app'),
   openGraph: {
     title: 'Abisekha Melfin | AI Engineer & Full Stack Developer',
     description: 'Building useful AI products and intelligent applications.',
