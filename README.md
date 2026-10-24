@@ -35,3 +35,8 @@ Edit `data/projects.ts`. Each project supports `liveUrl`, `githubUrl`, stack tag
 - Static export means server-only features and API routes are not included.
 - Google Fonts are loaded through `next/font/google` at build time; the build environment needs access to Google Fonts unless the font is self-hosted.
 - Open Graph and Twitter preview metadata use the bundled `public/og-image.svg`. The résumé PDF still needs to be supplied before the download buttons can work.
+
+
+## Project cover images
+
+Six optimized 16:9 WebP cover images are included in `public/projects/` and used by the project cards. They are cinematic concept artwork for portfolio presentation; UI details shown in artwork are illustrative, not live application screenshots.

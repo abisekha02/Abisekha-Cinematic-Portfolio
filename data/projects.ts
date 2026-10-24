@@ -10,6 +10,7 @@ export type Project = {
   featured: boolean;
   liveUrl?: string;
   githubUrl?: string;
+  coverImage?: string;
   visual: 'erp' | 'hire' | 'flow' | 'vision' | 'vr' | 'ocr';
 };
 
@@ -21,7 +22,7 @@ export const projects: Project[] = [
     role: 'Full-stack developer · Built the restaurant menu and ordering experience',
     outcome: 'Connects customer-facing menu and ordering screens with a database-backed application workflow.',
     stack: ['Next.js', 'React', 'TypeScript', 'PostgreSQL / Neon', 'Vercel'],
-    featured: true, liveUrl: 'https://kadai-erp.vercel.app/', visual: 'erp',
+    featured: true, liveUrl: 'https://kadai-erp.vercel.app/', coverImage: '/projects/kadai-erp.webp', visual: 'erp',
   },
   {
     number: '02', name: 'HireAI', category: 'LLM APPLICATION · RAG',
@@ -30,7 +31,7 @@ export const projects: Project[] = [
     role: 'Full-stack AI developer · Built semantic matching and RAG-based interview practice',
     outcome: 'Demonstrates document ingestion, semantic retrieval with pgvector, API design, access control, and AI evaluation workflows.',
     stack: ['React', 'TypeScript', 'Django REST', 'PostgreSQL', 'pgvector', 'LLM / RAG'],
-    featured: true, githubUrl: 'https://github.com/abisekha02/HireAI-', visual: 'hire',
+    featured: true, githubUrl: 'https://github.com/abisekha02/HireAI-', coverImage: '/projects/hireai.webp', visual: 'hire',
   },
   {
     number: '03', name: 'EmployeeAssist AI', category: 'AI AGENTS · WORKFLOW AUTOMATION',
@@ -39,7 +40,7 @@ export const projects: Project[] = [
     role: 'AI automation developer · Built the n8n request, approval, and email-notification workflow',
     outcome: 'Shows an approval-first workflow that keeps a person in control before external emails are sent.',
     stack: ['n8n', 'OpenAI', 'Gmail', 'Workflow logic', 'Human approval'],
-    featured: true, visual: 'flow',
+    featured: true, coverImage: '/projects/employeeassist.webp', visual: 'flow',
   },
   {
     number: '04', name: 'CareerFlow', category: 'FULL STACK · CAREER ANALYTICS',
@@ -48,7 +49,7 @@ export const projects: Project[] = [
     role: 'Full-stack developer · Built authenticated application tracking and analytics',
     outcome: 'Demonstrates authentication, authorization, data modelling, API integration, and a data-driven interface.',
     stack: ['React', 'Django REST', 'JWT', 'RBAC', 'PostgreSQL', 'Analytics'],
-    featured: true, liveUrl: 'https://careerflow-opal.vercel.app/', githubUrl: 'https://github.com/abisekha02/careerflow', visual: 'flow',
+    featured: true, liveUrl: 'https://careerflow-opal.vercel.app/', githubUrl: 'https://github.com/abisekha02/careerflow', coverImage: '/projects/careerflow.webp', visual: 'flow',
   },
   {
     number: '05', name: 'OCR Document Verification', category: 'COMPUTER VISION · DOCUMENT AI',
@@ -57,7 +58,7 @@ export const projects: Project[] = [
     role: 'Computer vision developer · Implemented OCR extraction and document-field validation',
     outcome: 'Combines image preprocessing, OCR text extraction, and field validation to reduce repetitive document review.',
     stack: ['Python', 'OpenCV', 'Tesseract OCR', 'Image processing', 'Validation'],
-    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', visual: 'ocr',
+    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', coverImage: '/projects/computer-vision.webp', visual: 'ocr',
   },
   {
     number: '06', name: 'AI-Based Helmet Detection', category: 'COMPUTER VISION · OBJECT DETECTION',
@@ -66,7 +67,7 @@ export const projects: Project[] = [
     role: 'Computer vision developer · Implemented object detection with OpenCV and YOLO',
     outcome: 'Applies model inference and image-processing concepts to a practical safety-monitoring scenario.',
     stack: ['Python', 'OpenCV', 'YOLO'],
-    featured: false, githubUrl: 'https://github.com/abisekha02/AI-Helmet-Detection', visual: 'vision',
+    featured: false, githubUrl: 'https://github.com/abisekha02/AI-Helmet-Detection', coverImage: '/projects/computer-vision.webp', visual: 'vision',
   },
   {
     number: '07', name: 'Employee Attendance System', category: 'FULL STACK · WORKFORCE MANAGEMENT',
@@ -93,6 +94,6 @@ export const projects: Project[] = [
     role: 'AR/VR developer · Project work',
     outcome: 'Combines interactive 3D experiences with navigation and spatial problem-solving.',
     stack: ['Unity', 'C#', 'AR / VR', 'A* pathfinding', 'Spatial UI'],
-    featured: false, visual: 'vr',
+    featured: false, coverImage: '/projects/ar-vr.webp', visual: 'vr',
   },
 ];

@@ -15,12 +15,11 @@ export default function ProjectCard({ project, index }: { project: Project; inde
   const Icon = icons[project.visual];
   return <Reveal delay={index * 0.06} className="group h-full">
     <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[.025] transition duration-500 hover:-translate-y-1 hover:border-rose-400/30 hover:bg-white/[.04] motion-reduce:transform-none">
-      <div className={`relative flex min-h-[210px] items-center justify-center overflow-hidden bg-gradient-to-br ${visualStyles[project.visual]} p-8 sm:min-h-[235px]`}>
-        <div className="absolute inset-0 site-grid opacity-50" />
-        <div className="absolute h-48 w-48 rounded-full bg-rose-500/10 blur-3xl transition duration-700 group-hover:scale-125" />
-        <div className="relative flex h-28 w-28 items-center justify-center rounded-[2rem] border border-white/15 bg-black/30 shadow-2xl backdrop-blur-xl transition duration-500 group-hover:rotate-[-3deg] group-hover:scale-105"><Icon size={42} strokeWidth={1.1} className="text-rose-200" /><span className="absolute -right-2 -top-2 h-3 w-3 rounded-full bg-rose-400 shadow-[0_0_18px_rgba(251,113,133,.9)]" /></div>
-        <span className="absolute left-6 top-6 text-xs tracking-[.2em] text-white/40">PROJECT / {project.number}</span>
-        <span className="absolute bottom-6 right-6 text-xs text-white/45">{project.liveUrl ? 'Live experience' : 'Source available'}</span>
+      <div className={`relative flex min-h-[210px] items-center justify-center overflow-hidden bg-gradient-to-br ${visualStyles[project.visual]} p-0 sm:min-h-[235px]`}>
+        {project.coverImage ? <img src={project.coverImage} alt={`${project.name} project cover`} loading="lazy" className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.035]" /> : <div className="absolute inset-0 flex items-center justify-center"><div className="absolute inset-0 site-grid opacity-50" /><div className="relative flex h-28 w-28 items-center justify-center rounded-[2rem] border border-white/15 bg-black/30 shadow-2xl backdrop-blur-xl"><Icon size={42} strokeWidth={1.1} className="text-rose-200" /></div></div>}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/5 to-black/20" />
+        <span className="absolute left-6 top-6 z-10 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 text-[10px] tracking-[.2em] text-white/75 backdrop-blur">PROJECT / {project.number}</span>
+        <span className="absolute bottom-5 right-5 z-10 rounded-full border border-white/10 bg-black/40 px-3 py-1.5 text-[10px] text-white/70 backdrop-blur">{project.liveUrl ? 'Live experience' : 'Project showcase'}</span>
       </div>
       <div className="flex flex-1 flex-col p-6 sm:p-7">
         <p className="section-kicker">{project.category}</p>
