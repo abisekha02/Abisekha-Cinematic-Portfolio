@@ -58,7 +58,7 @@ export const projects: Project[] = [
     role: 'Computer vision developer · Implemented OCR extraction and document-field validation',
     outcome: 'Combines image preprocessing, OCR text extraction, and field validation to reduce repetitive document review.',
     stack: ['Python', 'OpenCV', 'Tesseract OCR', 'Image processing', 'Validation'],
-    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', visual: 'ocr',
+    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', coverImage: '/projects/computer-vision.webp', visual: 'ocr',
   },
   {
     number: '06', name: 'AI-Based Helmet Detection', category: 'COMPUTER VISION · OBJECT DETECTION',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     role: 'Full-stack developer · Implemented attendance verification and employee/admin workflows',
     outcome: 'Combines GPS-based attendance checks, webcam capture, task tracking, and an admin dashboard in one workflow.',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Geolocation API'],
-    featured: false, liveUrl: 'https://attendancehubio.netlify.app/', githubUrl: 'https://github.com/abisekha02/smart-attendance-system', visual: 'flow',
+    featured: false, liveUrl: 'https://attendancehubio.netlify.app/', githubUrl: 'https://github.com/abisekha02/smart-attendance-system', coverImage: '/projects/careerflow.webp', visual: 'flow',
   },
   {
     number: '08', name: 'NishFin Connect', category: 'WEB APPLICATION · ISP SERVICES',
@@ -85,7 +85,7 @@ export const projects: Project[] = [
     role: 'Frontend / full-stack developer · Built service-plan browsing and customer support flows',
     outcome: 'Connects broadband plan browsing with service requests and support-ticket workflows in a responsive interface.',
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Supabase'],
-    featured: false, liveUrl: 'https://nishfinconnect.netlify.app/', githubUrl: 'https://github.com/abisekha02/nishfin-connect-website', visual: 'erp',
+    featured: false, liveUrl: 'https://nishfinconnect.netlify.app/', githubUrl: 'https://github.com/abisekha02/nishfin-connect-website', coverImage: '/projects/kadai-erp.webp', visual: 'erp',
   },
   {
     number: '09', name: 'Immersive AR / VR', category: 'UNITY · SPATIAL COMPUTING',
