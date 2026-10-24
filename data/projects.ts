@@ -58,7 +58,7 @@ export const projects: Project[] = [
     role: 'Computer vision developer · Implemented OCR extraction and document-field validation',
     outcome: 'Combines image preprocessing, OCR text extraction, and field validation to reduce repetitive document review.',
     stack: ['Python', 'OpenCV', 'Tesseract OCR', 'Image processing', 'Validation'],
-    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', coverImage: '/projects/computer-vision.webp', visual: 'ocr',
+    featured: false, githubUrl: 'https://github.com/abisekha02/OCR-Based-Document-Verification-System', visual: 'ocr',
   },
   {
     number: '06', name: 'AI-Based Helmet Detection', category: 'COMPUTER VISION · OBJECT DETECTION',
