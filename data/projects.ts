@@ -14,7 +14,7 @@ export type Project = {
   visual: 'erp' | 'hire' | 'flow' | 'vision' | 'vr' | 'ocr';
 };
 
-export const projects: Project[
+export const projects: Project[] = [
   {
     number: '01', name: 'EmployeeAssist AI', category: 'AI AGENTS · WORKFLOW AUTOMATION',
     headline: 'Human-approved automation for routine employee requests.',
